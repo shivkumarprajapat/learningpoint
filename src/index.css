@@ -7,7 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+form{
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 10px;
+}
+
+.learning1{
+box-shadow: 0 0 10px #ddd;
 }
