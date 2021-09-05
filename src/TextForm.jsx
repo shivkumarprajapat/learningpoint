@@ -25,7 +25,7 @@ export default function TextForm() {
     }
     const handleExtraSpaces = () => {
         let newtext = text.split(/[ ]+/);
-        setText(newtext.join(""))
+        setText(newtext.join(" "))
         }
         
 
