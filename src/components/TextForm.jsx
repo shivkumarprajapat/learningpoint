@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 
-export default function TextForm() {
+export default function TextForm(props) {
     const [text, setText] = useState("")
     const handleChange = (e) => {
         setText(e.target.value)
@@ -9,10 +9,12 @@ export default function TextForm() {
     const handleUpClick = () => {
         let newtext = text.toUpperCase();
         setText(newtext)
+        props.showAlert("Convert to UpperCase","success")
     }
     const handleLoClick = () => {
         let newtext = text.toLowerCase();
         setText(newtext)
+        props.showAlert("Convert to LoverCase","success")
     }
     const handleClClick = () => {
         setText("")
@@ -22,10 +24,12 @@ export default function TextForm() {
         var text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value)
+        props.showAlert("Copy Text","success")
     }
     const handleExtraSpaces = () => {
         let newtext = text.split(/[ ]+/);
         setText(newtext.join(" "))
+        props.showAlert("Remove Extra Spaces","success")
         }
         
 
